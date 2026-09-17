@@ -1,6 +1,6 @@
 // ==========================================================================
 // MTC - Maintenance Technology Center | KMUTT
-// Controller: White-Navy Theme with KMUTT Orange Accents
+// Controller: White-Navy Theme with KMUTT Orange Accents & Scopus Integration
 // ==========================================================================
 
 let currentLang = localStorage.getItem('mtc_lang') || 'th';
@@ -90,15 +90,18 @@ function updateLanguageUI(lang) {
   setElementText('hero-btn-explore', t.hero.btn_explore);
   setElementText('hero-btn-contact', t.hero.btn_contact);
 
-  // Hero Stats
+  // Hero Stats Grid (Including Combined Citations)
   const statsContainer = document.getElementById('hero-stats');
   if (statsContainer) {
-    statsContainer.innerHTML = t.hero.stats.map(s => `
-      <div class="white-card rounded-2xl p-5 border border-slate-200 text-center stripe-orange-top">
-        <div class="text-2xl lg:text-3xl font-extrabold text-[#162f55] mb-1 font-mono">${s.value}</div>
-        <div class="text-xs text-slate-600 font-medium">${s.label}</div>
-      </div>
-    `).join('');
+    statsContainer.innerHTML = t.hero.stats.map(s => {
+      const isHighlight = s.highlight;
+      return `
+        <div class="white-card rounded-2xl p-4 sm:p-5 border text-center ${isHighlight ? 'border-orange-300 ring-2 ring-orange-500/20 bg-orange-50/20' : 'border-slate-200'} stripe-orange-top">
+          <div class="text-2xl lg:text-3xl font-extrabold ${isHighlight ? 'text-[#f05a28]' : 'text-[#162f55]'} mb-1 font-mono">${s.value}</div>
+          <div class="text-[11px] sm:text-xs text-slate-600 font-medium">${s.label}</div>
+        </div>
+      `;
+    }).join('');
   }
 
   // About Section
@@ -284,7 +287,7 @@ function initModalListeners() {
 }
 
 // --------------------------------------------------------------------------
-// KMUTT NDT Research Team Rendering
+// KMUTT NDT Research Team Rendering (With Scopus Button)
 // --------------------------------------------------------------------------
 function initTeamMembers() {
   const container = document.getElementById('team-cards-container');
@@ -296,7 +299,7 @@ function initTeamMembers() {
   container.innerHTML = members.map(m => `
     <div class="white-card rounded-3xl p-6 sm:p-7 border border-slate-200/90 flex flex-col justify-between hover:border-[#162f55] transition-all duration-300 group stripe-orange-top">
       <div>
-        <!-- Card Header: Photo + Details -->
+        <!-- Card Header: Photo + Details + Scopus -->
         <div class="flex items-start gap-4 sm:gap-5 mb-5">
           <!-- Profile Image -->
           <div class="w-18 h-22 sm:w-22 sm:h-26 rounded-2xl overflow-hidden bg-slate-100 border-2 border-slate-200 group-hover:border-[#f05a28] transition-colors flex-shrink-0 relative shadow-sm">
@@ -308,7 +311,7 @@ function initTeamMembers() {
             </div>
           </div>
 
-          <!-- Name & Academic Title -->
+          <!-- Name, Academic Title & Scopus Button -->
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1">
               <span class="text-[11px] font-mono font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">
@@ -321,9 +324,23 @@ function initTeamMembers() {
             ${currentLang === 'th' ? `
               <div class="text-xs font-semibold text-slate-500 mb-1">${m.name_th}</div>
             ` : ''}
-            <div class="text-xs font-medium text-slate-600 leading-tight">
+            <div class="text-xs font-medium text-slate-600 leading-tight mb-2">
               ${currentLang === 'th' ? m.position_th : m.position}
             </div>
+
+            <!-- Scopus Profile Button (If available) -->
+            ${m.scopus ? `
+              <a href="${m.scopus}" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold text-[#ea580c] bg-orange-50 hover:bg-orange-100 border border-orange-200/80 hover:border-orange-400 transition-all shadow-xs group/btn">
+                <svg class="w-3.5 h-3.5 text-[#ea580c]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 13.5l-7-3.18V18l7 4 7-4v-5.68l-7 3.18z"/>
+                </svg>
+                <span>${teamData.scopus_btn_lbl || 'Scopus Profile'}</span>
+                <svg class="w-3 h-3 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            ` : ''}
           </div>
         </div>
 
@@ -470,7 +487,6 @@ function initHeroWaveAnimation() {
     const w = canvas.width;
     const h = canvas.height;
 
-    // 2 Soft flowing wave layers in Navy & Orange
     const waves = [
       { color: 'rgba(22, 47, 85, 0.04)', freq: 0.003, speed: 0.012, amp: 30, yOffset: h * 0.70 },
       { color: 'rgba(240, 90, 40, 0.035)', freq: 0.002, speed: 0.018, amp: 40, yOffset: h * 0.75 }

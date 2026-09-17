@@ -23,9 +23,10 @@ const siteData = {
       btn_contact: "ร่วมมือทางวิจัยและอุตสาหกรรม",
       stats: [
         { label: "เทคโนโลยี NDT&E หลัก", value: "5 ด้าน" },
-        { label: "ทีมผู้เชี่ยวชาญชั้นนำ", value: "8 ท่าน" },
-        { label: "ตรวจวัดโครงสร้างแบบ Real-Time", value: "24/7" },
-        { label: "มาตรฐานความแม่นยำระดับสากล", value: "ISO/ASNT" }
+        { label: "ทีมอาจารย์ & นักวิจัย", value: "8 ท่าน" },
+        { label: "Citations รวม (Scopus)", value: "1,000+", highlight: true },
+        { label: "เฝ้าระวังโครงสร้าง Real-Time", value: "24/7" },
+        { label: "มาตรฐานสากลอุตสาหกรรม", value: "ISO/ASNT" }
       ]
     },
     about: {
@@ -152,6 +153,7 @@ const siteData = {
       subtitle: "Team Profile and Expertise — การรวมตัวของคณาจารย์และนักวิจัยสหสาขาวิชาชีพเพื่อขับเคลื่อนนวัตกรรม NDT&E",
       role_in_project_lbl: "บทบาทในโครงการ (Role in the Project):",
       key_expertise_lbl: "ความเชี่ยวชาญหลัก (Key Expertise):",
+      scopus_btn_lbl: "Scopus Profile",
       members: [
         {
           id: "member-1",
@@ -163,6 +165,7 @@ const siteData = {
           position_th: "ที่ปรึกษา, ภาควิชาวิศวกรรมการผลิต มจธ. / MTC / KINGWELD",
           category: "consultant",
           image: "assets/images/team-1.png",
+          scopus: null,
           profile: "Assoc. Prof. Wachira Methong มีความเชี่ยวชาญลึกซึ้งด้านวิศวกรรมการผลิต มีประสบการณ์สูงในระบบการวัดและระเบียบวิธีการตรวจสอบ เพื่อรองรับการพัฒนาแพลตฟอร์มการทดสอบที่มีความน่าเชื่อถือ และกระบวนการประเมินทางวิศวกรรมที่ทำซ้ำได้อย่างแม่นยำ",
           expertise: [
             "Nondestructive testing",
@@ -182,6 +185,7 @@ const siteData = {
           position_th: "ผู้อำนวยการศูนย์วิจัยและบริการวิชาการด้านการเชื่อม มจธ.",
           category: "director",
           image: "assets/images/team-2.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=14060769400",
           profile: "Assoc. Prof. Dr. Bovornchok Poopat เชี่ยวชาญเฉพาะทางด้านเทคโนโลยีการเชื่อม ความสมบูรณ์เชิงโครงสร้าง (Structural Integrity) และการวิเคราะห์ความเสียหาย (Failure Analysis) ทั้งการตรวจสอบแบบทำลายและไม่ทำลาย เพื่อประเมินความปลอดภัยของโครงสร้างรับน้ำหนัก",
           expertise: [
             "Welding technology and process control",
@@ -203,6 +207,7 @@ const siteData = {
           position_th: "ผู้อำนวยการศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "director",
           image: "assets/images/team-3.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=55324593700",
           profile: "Assoc. Prof. Dr. Isaratat Phung-On เป็นผู้เชี่ยวชาญอาวุโสด้านโลหะวิทยาการเชื่อมและพฤติกรรมของวัสดุโครงสร้าง เชี่ยวชาญการตรวจวิเคราะห์กลไกการเสื่อมสภาพของวัสดุ กลไกการเกิดความเสียหาย และการประเมินอายุการใช้งานในชิ้นส่วนและโครงสร้างอุตสาหกรรม",
           expertise: [
             "Welding metallurgy",
@@ -223,6 +228,7 @@ const siteData = {
           position_th: "อาจารย์ประจำภาควิชาวิศวกรรมการผลิต มจธ.",
           category: "researcher",
           image: "assets/images/team-4.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=57217984180",
           profile: "Dr. Somporn Peansukmanee ผสานความเชี่ยวชาญด้านวิศวกรรมการเชื่อม การวิเคราะห์คุณลักษณะของวัสดุ และการผลิตทางกลไก เพื่อแปลงแนวคิดการตรวจสอบทางทฤษฎีสู่ชิ้นงานต้นแบบและโซลูชันวิศวกรรมที่นำไปใช้งานได้จริง",
           expertise: [
             "Welding engineering",
@@ -243,6 +249,7 @@ const siteData = {
           position_th: "อาจารย์ประจำภาควิชาวิศวกรรมการผลิต มจธ.",
           category: "researcher",
           image: "assets/images/team-5.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=56884865000",
           profile: "Asst. Prof. Dr. Chettapong Janya-anurak เชี่ยวชาญด้านแบบจำลองทางคณิตศาสตร์ การจำลองเชิงตัวเลข ระบบเมคคาทรอนิกส์ และการวิเคราะห์ข้อมูลอัจฉริยะ โดดเด่นด้านการตีความสัญญาณ การสร้างโมเดลระบบ และการประเมินความไม่แน่นอนเพื่อการตัดสินใจ",
           expertise: [
             "Simulation and mathematical modeling",
@@ -263,6 +270,7 @@ const siteData = {
           position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "researcher",
           image: "assets/images/team-6.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=35366408700",
           profile: "Asst. Prof. Chalermkiat Jirarungsatian มีประสบการณ์ยาวนานในงานทดสอบแบบไม่ทำลายเชิงประยุกต์ เครื่องมือวัดทางอุตสาหกรรม และการพัฒนาระบบตรวจสอบภาคปฏิบัติ นำงานวิจัยสู่เครื่องมือวิศวกรรมที่พร้อมใช้งานภาคสนาม",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -283,6 +291,7 @@ const siteData = {
           position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "researcher",
           image: "assets/images/team-7.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
           profile: "Asst. Prof. Dr. Cherdpong Jomdecha เชี่ยวชาญโดยตรงด้านเทคโนโลยีการทดสอบแบบไม่ทำลาย เทคโนโลยีเซนเซอร์ การประมวลผลสัญญาณ และการจำลองเชิงตัวเลข มีผลงานโดดเด่นด้านการตรวจสอบลวดสลิงและระบบวินิจฉัยด้วยการรั่วไหลของฟลักซ์แม่เหล็ก (MFL)",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -303,6 +312,7 @@ const siteData = {
           position_th: "ผู้ช่วยนักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "assistant",
           image: "assets/images/team-8.png",
+          scopus: null,
           profile: "Mr. Nico Brienza สำเร็จการศึกษาด้านวิศวกรรมเมคคาทรอนิกส์และการบูรณาการระบบ สนับสนุนการพัฒนาแพลตฟอร์มการตรวจสอบแบบบูรณาการ ผ่านการเชื่อมต่อฮาร์ดแวร์-ซอฟต์แวร์และการนำระบบไปปฏิบัติการจริง",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -408,9 +418,10 @@ const siteData = {
       btn_contact: "Industry & R&D Collaboration",
       stats: [
         { label: "Core NDT Technologies", value: "5 Areas" },
-        { label: "Distinguished Experts", value: "8 Members" },
+        { label: "Faculty & Researchers", value: "8 Members" },
+        { label: "Combined Scopus Citations", value: "1,000+", highlight: true },
         { label: "Real-Time Structural Health", value: "24/7" },
-        { label: "Precision Standard", value: "ISO/ASNT" }
+        { label: "International Standards", value: "ISO/ASNT" }
       ]
     },
     about: {
@@ -537,6 +548,7 @@ const siteData = {
       subtitle: "Team Profile and Expertise — Multidisciplinary faculty and researchers driving NDT&E innovations",
       role_in_project_lbl: "Role in the Project:",
       key_expertise_lbl: "Key Expertise:",
+      scopus_btn_lbl: "Scopus Profile",
       members: [
         {
           id: "member-1",
@@ -548,6 +560,7 @@ const siteData = {
           position_th: "ที่ปรึกษา, ภาควิชาวิศวกรรมการผลิต มจธ. / MTC / KINGWELD",
           category: "consultant",
           image: "assets/images/team-1.png",
+          scopus: null,
           profile: "Assoc. Prof. Wachira Methong has a strong background in production engineering and practical experience in measurement systems and inspection methods. His expertise supports the development of reliable testing platforms and repeatable engineering evaluation procedures.",
           expertise: [
             "Nondestructive testing",
@@ -567,6 +580,7 @@ const siteData = {
           position_th: "ผู้อำนวยการศูนย์วิจัยและบริการวิชาการด้านการเชื่อม มจธ.",
           category: "director",
           image: "assets/images/team-2.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=14060769400",
           profile: "Assoc. Prof. Dr. Bovornchok Poopat specializes in welding technology, structural integrity, and failure analysis. His work spans both destructive and nondestructive evaluation, with a focus on engineering assessment and safety performance of welded and load-bearing systems.",
           expertise: [
             "Welding technology and process control",
@@ -588,6 +602,7 @@ const siteData = {
           position_th: "ผู้อำนวยการศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "director",
           image: "assets/images/team-3.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=55324593700",
           profile: "Assoc. Prof. Dr. Isaratat Phung-On is a senior expert in welding metallurgy and structural material behavior. His academic and research background supports advanced investigation of material degradation, failure mechanisms, and service-life assessment in industrial components and structures.",
           expertise: [
             "Welding metallurgy",
@@ -608,6 +623,7 @@ const siteData = {
           position_th: "อาจารย์ประจำภาควิชาวิศวกรรมการผลิต มจธ.",
           category: "researcher",
           image: "assets/images/team-4.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=57217984180",
           profile: "Dr. Somporn Peansukmanee combines expertise in welding engineering, materials characterization, and mechanical fabrication. His multidisciplinary background is valuable for translating inspection concepts into workable prototypes and practical engineering solutions.",
           expertise: [
             "Welding engineering",
@@ -628,6 +644,7 @@ const siteData = {
           position_th: "อาจารย์ประจำภาควิชาวิศวกรรมการผลิต มจธ.",
           category: "researcher",
           image: "assets/images/team-5.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=56884865000",
           profile: "Asst. Prof. Dr. Chettapong Janya-anurak has expertise in mathematical modeling, simulation, mechatronic systems, and intelligent data analysis. His background is especially relevant to signal interpretation, system modeling, and uncertainty-aware decision support.",
           expertise: [
             "Simulation and mathematical modeling",
@@ -648,6 +665,7 @@ const siteData = {
           position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "researcher",
           image: "assets/images/team-6.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=35366408700",
           profile: "Asst. Prof. Chalermkiat Jirarungsatian has extensive experience in applied nondestructive testing, industrial instrumentation, and practical system development for testing applications. His work supports the transformation of research concepts into deployable engineering tools.",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -668,6 +686,7 @@ const siteData = {
           position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "researcher",
           image: "assets/images/team-7.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
           profile: "Asst. Prof. Dr. Cherdpong Jomdecha has direct expertise in nondestructive testing and evaluation, sensor technologies, signal processing, and numerical simulation. His specialization aligns closely with wire rope inspection and magnetic-flux-based diagnostic systems.",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -688,6 +707,7 @@ const siteData = {
           position_th: "ผู้ช่วยนักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
           category: "assistant",
           image: "assets/images/team-8.png",
+          scopus: null,
           profile: "Mr. Nico Brienza has a background in mechatronics engineering and system integration. He supports the practical development of integrated inspection platforms through hands-on work in hardware-software interfacing and system implementation.",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -702,75 +722,75 @@ const siteData = {
     },
     applications: {
       badge: "FIELD APPLICATIONS",
-      title: "การประยุกต์ใช้ในภาคอุตสาหกรรม",
-      subtitle: "เทคโนโลยี NDT&E ของ มจธ. รองรับอุตสาหกรรมยุทธศาสตร์หลักของประเทศ",
+      title: "Strategic Industrial Sectors",
+      subtitle: "KMUTT's NDT&E solutions support crucial domestic and international industries",
       sectors: [
         {
-          title: "ระบบรางและการขนส่ง",
-          desc: "ตรวจสอบรางรถไฟ โครงสร้างทางวิ่ง ล้อ และเพลา เพื่อความปลอดภัยสูงสุดในการเดินทาง",
+          title: "Railway & Transportation",
+          desc: "Inspecting tracks, wheels, bogies, and civil transit structures for maximum public travel safety.",
           icon: "train"
         },
         {
-          title: "อุตสาหกรรมการผลิต & เครื่องจักร",
-          desc: "ตรวจสอบรอยเชื่อม ท่อแรงดัน ชิ้นงานหล่อ และการเฝ้าระวังการสั่นสะเทือนของเครื่องจักรหลัก",
+          title: "Manufacturing & Heavy Machinery",
+          desc: "Validating critical welded assemblies, pressure components, and rotating equipment health.",
           icon: "factory"
         },
         {
-          title: "พลังงาน ปิโตรเคมี & ท่อส่ง",
-          desc: "เฝ้าระวังการกัดกร่อน การรั่วไหล และความสมบูรณ์ของถังบรรจุสารเคมีและท่อส่งใต้ดิน",
+          title: "Energy, Petrochemical & Pipelines",
+          desc: "Monitoring internal corrosion, hydrogen induced cracking, and pipeline integrity under harsh service.",
           icon: "flame"
         },
         {
-          title: "อากาศยานและการบิน",
-          desc: "ตรวจสอบรอยร้าวขนาดเล็กระดับไมครอนในโครงสร้างปีก ลำตัว และวัสดุคอมโพสิตขั้นสูง",
+          title: "Aerospace & Marine",
+          desc: "Detecting micro-cracks and composite delamination in aircraft structures and ship hulls.",
           icon: "plane"
         }
       ]
     },
     services: {
       badge: "OUR SERVICES",
-      title: "บริการและความร่วมมือ",
-      subtitle: "ศูนย์ MTC มจธ. พร้อมร่วมงานกับภาครัฐ เอกชน และนักวิจัยทั่วโลก",
+      title: "Capabilities & Industrial Services",
+      subtitle: "MTC KMUTT is ready to partner with industries, research institutes, and engineering leaders",
       list: [
         {
-          title: "การตรวจวัดและทดสอบความสมบูรณ์เชิงโครงสร้าง",
-          desc: "บริการตรวจวัดนอกสถานที่ด้วยทีมผู้เชี่ยวชาญและเครื่องมือ NDT มาตรฐานสากล"
+          title: "On-Site Structural NDT Inspection",
+          desc: "Field non-destructive testing and structural diagnostics conducted by certified NDT specialists."
         },
         {
-          title: "วิจัยและพัฒนาโซลูชันเฉพาะทาง (R&D)",
-          desc: "ร่วมพัฒนาเซนเซอร์ ระบบอัตโนมัติ และอัลกอริทึมสำหรับปัญหาเฉพาะของภาคอุตสาหกรรม"
+          title: "Custom R&D & Novel Sensor Development",
+          desc: "Tailored engineering research to develop custom sensors, testing rigs, and signal algorithms."
         },
         {
-          title: "การติดตั้งระบบเฝ้าระวังระยะยาว (SHM)",
-          desc: "ออกแบบและติดตั้งระบบเซนเซอร์ตรวจวัดความสมบูรณ์ของโครงสร้างแบบต่อเนื่อง 24 ชม."
+          title: "Structural Health Monitoring (SHM) Systems",
+          desc: "Design and turnkey installation of continuous 24/7 sensor networks with telemetric alerting."
         },
         {
-          title: "อบรมและพัฒนาบุคลากรด้าน NDT",
-          desc: "หลักสูตรฝึกอบรมเชิงปฏิบัติการด้านเทคนิคการทดสอบแบบไม่ทำลายและการวิเคราะห์สัญญาณ"
+          title: "Specialized Training & Professional Workshops",
+          desc: "Advanced training programs on NDT methodologies, signal processing, and international standards."
         }
       ]
     },
     contact: {
       badge: "GET IN TOUCH",
-      title: "ติดต่อศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC)",
-      address_title: "ที่ตั้งศูนย์วิจัย",
-      address: "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (KMUTT บางมด)\n126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140",
-      email_title: "อีเมลติดต่อ",
+      title: "Contact Maintenance Technology Center (MTC)",
+      address_title: "Research Center Location",
+      address: "King Mongkut's University of Technology Thonburi (KMUTT Bangmod)\n126 Pracha Uthit Rd, Bang Mot, Thung Khru, Bangkok 10140, Thailand",
+      email_title: "Email Address",
       email: "mtc-ndt@kmutt.ac.th",
-      phone_title: "โทรศัพท์",
-      phone: "+66 (0) 2470 8000 ต่อ 9000",
-      form_name: "ชื่อ-นามสกุล",
-      form_email: "อีเมล",
-      form_org: "หน่วยงาน / บริษัท",
-      form_topic: "หัวข้อที่ต้องการติดต่อ",
-      form_message: "ข้อความ / รายละเอียดที่ต้องการสอบถาม",
-      form_submit: "ส่งข้อความติดต่อ",
-      form_success: "ขอบคุณที่ติดต่อศูนย์ MTC! ข้อความของคุณถูกส่งเรียบร้อยแล้ว เจ้าหน้าที่จะติดต่อกลับโดยเร็ว"
+      phone_title: "Telephone",
+      phone: "+66 (0) 2470 8000 ext. 9000",
+      form_name: "Full Name",
+      form_email: "Email Address",
+      form_org: "Company / Organization",
+      form_topic: "Inquiry Topic",
+      form_message: "Message / Specific Requirements",
+      form_submit: "Send Message",
+      form_success: "Thank you for reaching out to MTC! Your message has been received. Our team will contact you shortly."
     },
     footer: {
       copyright: "© 2026 Maintenance Technology Center (MTC) & Novel Detection Development Technology Working Group.",
       univ: "King Mongkut's University of Technology Thonburi (KMUTT)",
-      rights: "สงวนลิขสิทธิ์ทุกประการ"
+      rights: "All Rights Reserved."
     }
   }
 };
