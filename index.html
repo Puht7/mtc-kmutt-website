@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTC | Maintenance Technology Center - KMUTT (ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา มจธ.)</title>
+  <meta name="description" content="Maintenance Technology Center (MTC) & Novel Detection Development Technology Working Group at King Mongkut's University of Technology Thonburi (KMUTT). Research excellence in Non-Destructive Testing and Evaluation (NDT&E).">
+
+  <!-- Google Fonts: Prompt & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kmutt: {
+              DEFAULT: '#f05a28',
+              dark: '#c84113',
+              light: '#ff7e54',
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f05a28',
+              600: '#ea580c',
+              700: '#c2410c'
+            },
+            ndt: {
+              navy: '#162f55',
+              dark: '#0d1e38',
+              light: '#244677',
+              blue: '#1d4ed8'
+            }
+          },
+          fontFamily: {
+            sans: ['Prompt', 'Inter', 'sans-serif'],
+            mono: ['SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-[#f05a28] selection:text-white relative overflow-x-hidden">
+
+  <!-- Top Fixed KMUTT Orange Accent Stripe -->
+  <div class="h-1.5 w-full bg-gradient-to-r from-[#ea580c] via-[#f05a28] to-[#f97316] fixed top-0 left-0 z-[60]"></div>
+
+  <!-- ========================================================================
+       Navigation Bar (Enlarged Logos & White-Navy Style)
+       ======================================================================== -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav-light transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      
+      <!-- Dual Logos: KMUTT + NDT Working Group (Enlarged) -->
+      <a href="#" class="flex items-center space-x-3 sm:space-x-4 group">
+        <!-- KMUTT Crest Logo (Bigger) -->
+        <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <img src="assets/images/kmutt-logo.png" alt="KMUTT Logo" class="w-full h-full object-contain drop-shadow-sm">
+        </div>
+        
+        <!-- Subtle Divider Line -->
+        <div class="h-10 sm:h-12 w-px bg-slate-300"></div>
+
+        <!-- NDT Working Group Logo (Bigger & Transparent) -->
+        <div class="h-12 sm:h-16 w-auto flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <img src="assets/images/ndt-logo.png" alt="NDT Working Group" class="h-full w-auto object-contain">
+        </div>
+
+        <!-- Brand Text Badge -->
+        <div class="hidden xl:block pl-2 border-l border-slate-200">
+          <div class="text-base font-extrabold text-[#162f55] tracking-tight leading-tight">
+            MTC <span class="text-[#f05a28] font-black">KMUTT</span>
+          </div>
+          <div class="text-[11px] text-slate-500 font-medium tracking-tight">Maintenance Technology Center</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+        <a href="#about" id="nav-about" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">เกี่ยวกับศูนย์</a>
+        <a href="#technologies" id="nav-strengths" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">5 เทคโนโลยี NDT&E</a>
+        <a href="#team" id="nav-team" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">ทีมวิจัยและผู้เชี่ยวชาญ</a>
+        <a href="#applications" id="nav-apps" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">การประยุกต์ใช้งาน</a>
+        <a href="#services" id="nav-services" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">งานบริการ & วิจัย</a>
+        <a href="#contact" id="nav-contact" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">ติดต่อเรา</a>
+      </nav>
+
+      <!-- Right Action Items: Language Switcher + CTA -->
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <!-- Language Switcher Pill -->
+        <div class="inline-flex p-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs shadow-inner">
+          <button id="lang-th" type="button" class="px-3 py-1 font-bold rounded-full bg-[#162f55] text-white shadow-sm transition">TH</button>
+          <button id="lang-en" type="button" class="px-3 py-1 font-bold rounded-full text-slate-500 hover:text-[#162f55] transition">EN</button>
+        </div>
+
+        <!-- CTA Button with KMUTT Orange Accent Border -->
+        <a href="#contact" id="nav-cta-btn" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#162f55] hover:bg-[#0d1e38] text-white border-b-2 border-[#f05a28] shadow-sm hover:shadow-md transition-all">
+          ปรึกษางานวิจัย
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" type="button" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-[#162f55] hover:bg-slate-100 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#about" id="mob-nav-about" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">เกี่ยวกับศูนย์</a>
+      <a href="#technologies" id="mob-nav-strengths" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">5 เทคโนโลยี NDT&E</a>
+      <a href="#team" id="mob-nav-team" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">ทีมวิจัยและผู้เชี่ยวชาญ</a>
+      <a href="#applications" id="mob-nav-apps" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">การประยุกต์ใช้งาน</a>
+      <a href="#services" id="mob-nav-services" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">งานบริการ & วิจัย</a>
+      <a href="#contact" id="mob-nav-contact" class="block text-sm font-semibold text-slate-700 hover:text-[#162f55]">ติดต่อเรา</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         Hero Section (White-Navy with Subtle Grid & Wave)
+         ====================================================================== -->
+    <section class="relative min-h-[85vh] flex items-center justify-center pt-36 pb-20 overflow-hidden bg-tech-grid-light">
+      <!-- Background Canvas for Subtle Wave -->
+      <canvas id="heroWaveCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+      <!-- Ambient Glow Blobs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-blue-100/60 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute bottom-10 right-10 w-[350px] h-[350px] bg-orange-100/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        
+        <!-- Center Affiliation Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold badge-kmutt-light mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#f05a28]"></span>
+          <span id="hero-badge">ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา มจธ. | NDT Working Group</span>
+        </div>
+
+        <!-- Hero Headline (Deep Navy + KMUTT Orange) -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#162f55] leading-tight mb-6">
+          <span id="hero-title-start">ความเป็นเลิศด้านเทคโนโลยี</span><br>
+          <span id="hero-title-highlight" class="text-gradient-orange">การทดสอบและประเมินแบบไม่ทำลาย (NDT&E)</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p id="hero-subtitle" class="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed mb-10">
+          มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (KMUTT) มุ่งสร้างความเข้มแข็งงานวิจัยขั้นสูงด้าน Non-Destructive Testing and Evaluation เพื่อสนับสนุนอุตสาหกรรมการผลิตสมัยใหม่ การเฝ้าระวังความสมบูรณ์เชิงโครงสร้าง และระบบโครงสร้างพื้นฐานการคมนาคมขนส่ง
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+          <a href="#technologies" id="hero-btn-explore" class="px-7 py-3.5 rounded-xl font-bold text-sm bg-[#162f55] hover:bg-[#0d1e38] text-white border-b-2 border-[#f05a28] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+            สำรวจ 5 เทคโนโลยีหลัก
+          </a>
+          <a href="#team" class="px-7 py-3.5 rounded-xl font-bold text-sm bg-white hover:bg-slate-50 text-[#162f55] border border-slate-300 hover:border-[#162f55] shadow-sm hover:-translate-y-0.5 transition-all">
+            ทีมวิจัยและผู้เชี่ยวชาญ
+          </a>
+        </div>
+
+        <!-- Hero Metric Stats Grid -->
+        <div id="hero-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         About Center Section
+         ====================================================================== -->
+    <section id="about" class="py-24 bg-white border-t border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Details -->
+          <div class="lg:col-span-7 space-y-5">
+            <span id="about-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase">
+              ABOUT MTC & KMUTT
+            </span>
+            <div class="title-accent-line"></div>
+            <h2 id="about-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55] leading-tight">
+              ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
+            </h2>
+            <p id="about-desc-1" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Maintenance Technology Center (MTC) ร่วมกับกลุ่มวิจัย Novel Detection Development Technology (NDT) Working Group มุ่งเน้นการวิจัย พัฒนา และประยุกต์ใช้องค์ความรู้ด้านวิศวกรรมการตรวจสอบและซ่อมบำรุงรักษาขั้นสูง เพื่อยกระดับความปลอดภัย ความน่าเชื่อถือ และอายุการใช้งานของโครงสร้างและเครื่องจักรในภาคอุตสาหกรรม
+            </p>
+            <p id="about-desc-2" class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+              ด้วยความเชี่ยวชาญของคณาจารย์ นักวิจัย และเครื่องมือตรวจวัดที่ทันสมัย มจธ. ได้พัฒนาทั้งระบบฮาร์ดแวร์เซนเซอร์ความเร็วสูง และอัลกอริทึมการประมวลผลสัญญาณอัจฉริยะที่ตอบโจทย์ความท้าทายของโครงสร้างพื้นฐานระดับชาติ
+            </p>
+          </div>
+
+          <!-- Right Column: 3 Pillars Grid -->
+          <div id="about-pillars" class="lg:col-span-5 space-y-4">
+            <!-- Rendered by JS -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5 Core Technological Strengths Section (Featured)
+         ====================================================================== -->
+    <section id="technologies" class="py-24 bg-[#f1f5f9] border-t border-slate-200 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span id="tech-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase mb-2">
+            CORE CAPABILITIES
+          </span>
+          <div class="title-accent-line mx-auto mb-4"></div>
+          <h2 id="tech-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55] mb-2">
+            5 จุดเด่นด้านเทคโนโลยี NDT&E
+          </h2>
+          <p id="tech-subtitle" class="text-xs sm:text-sm text-slate-500 mb-3">
+            Technological Strengths in Non-Destructive Testing and Evaluation
+          </p>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold text-[#162f55] bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-[#f05a28]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span id="tech-hint">คลิกที่การ์ดเพื่อดูรายละเอียดทางเทคนิค อุปกรณ์ และการนำไปใช้</span>
+          </div>
+        </div>
+
+        <!-- 5 Cards Grid -->
+        <div id="tech-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Injected via JavaScript from content.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         KMUTT NDT Research Team Section
+         ====================================================================== -->
+    <section id="team" class="py-24 bg-white border-t border-slate-200 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span id="team-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase mb-2">
+            KMUTT NDT RESEARCH TEAM
+          </span>
+          <div class="title-accent-line mx-auto mb-4"></div>
+          <h2 id="team-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55] mb-2">
+            ทีมวิจัยและผู้เชี่ยวชาญ
+          </h2>
+          <p id="team-subtitle" class="text-xs sm:text-sm text-slate-500">
+            Team Profile and Expertise — การรวมตัวของคณาจารย์และนักวิจัยสหสาขาวิชาชีพเพื่อขับเคลื่อนนวัตกรรม NDT&E
+          </p>
+        </div>
+
+        <!-- 8 Members Grid -->
+        <div id="team-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Populated by JavaScript from content.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Industrial Applications Section
+         ====================================================================== -->
+    <section id="applications" class="py-24 bg-[#f8fafc] border-t border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span id="app-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase mb-2">
+            FIELD APPLICATIONS
+          </span>
+          <div class="title-accent-line mx-auto mb-4"></div>
+          <h2 id="app-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55] mb-2">
+            การประยุกต์ใช้ในภาคอุตสาหกรรม
+          </h2>
+          <p id="app-subtitle" class="text-xs sm:text-sm text-slate-500">
+            เทคโนโลยี NDT&E ของ มจธ. รองรับอุตสาหกรรมยุทธศาสตร์หลักของประเทศ
+          </p>
+        </div>
+
+        <div id="applications-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Services & Collaboration Section
+         ====================================================================== -->
+    <section id="services" class="py-24 bg-white border-t border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span id="services-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase mb-2">
+            OUR SERVICES
+          </span>
+          <div class="title-accent-line mx-auto mb-4"></div>
+          <h2 id="services-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55] mb-2">
+            บริการและความร่วมมือ
+          </h2>
+          <p id="services-subtitle" class="text-xs sm:text-sm text-slate-500">
+            ศูนย์ MTC มจธ. พร้อมร่วมงานกับภาครัฐ เอกชน และนักวิจัยทั่วโลก
+          </p>
+        </div>
+
+        <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Contact Section
+         ====================================================================== -->
+    <section id="contact" class="py-24 bg-[#f1f5f9] border-t border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 space-y-5">
+            <span id="contact-badge" class="inline-block text-xs font-bold tracking-widest text-[#f05a28] uppercase">
+              GET IN TOUCH
+            </span>
+            <div class="title-accent-line"></div>
+            <h2 id="contact-title" class="text-2xl sm:text-4xl font-extrabold text-[#162f55]">
+              ติดต่อศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC)
+            </h2>
+
+            <div class="space-y-6 pt-4 text-sm text-slate-700">
+              
+              <!-- Address -->
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-[#f05a28] flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 id="contact-addr-title" class="font-bold text-[#162f55] mb-1">ที่ตั้งศูนย์วิจัย</h4>
+                  <p id="contact-address" class="text-slate-600 leading-relaxed whitespace-pre-line text-xs sm:text-sm">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (KMUTT บางมด)&#10;126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-[#162f55] flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h4 id="contact-email-title" class="font-bold text-[#162f55] mb-1">อีเมลติดต่อ</h4>
+                  <a href="mailto:mtc-ndt@kmutt.ac.th" class="text-[#f05a28] font-medium hover:underline text-xs sm:text-sm">mtc-ndt@kmutt.ac.th</a>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <h4 id="contact-phone-title" class="font-bold text-[#162f55] mb-1">โทรศัพท์</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm">+66 (0) 2470 8000 ต่อ 9000</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="white-card rounded-3xl p-8 border border-slate-200 shadow-md stripe-orange-top">
+              <form id="contact-form" class="space-y-4">
+                
+                <div id="form-alert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-700 text-sm font-medium">
+                  <!-- Success message injected here -->
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-[#162f55] mb-1.5">ชื่อ-นามสกุล / Name</label>
+                    <input id="input-name" type="text" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#162f55] focus:bg-white transition">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-[#162f55] mb-1.5">อีเมล / Email</label>
+                    <input id="input-email" type="email" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#162f55] focus:bg-white transition">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-[#162f55] mb-1.5">หน่วยงาน / Company</label>
+                    <input id="input-org" type="text" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#162f55] focus:bg-white transition">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-[#162f55] mb-1.5">หัวข้อ / Subject</label>
+                    <input id="input-topic" type="text" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#162f55] focus:bg-white transition">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-[#162f55] mb-1.5">ข้อความ / Message</label>
+                  <textarea id="input-message" rows="4" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#162f55] focus:bg-white transition"></textarea>
+                </div>
+
+                <button id="form-btn-submit" type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm bg-[#162f55] hover:bg-[#0d1e38] text-white border-b-2 border-[#f05a28] shadow-md hover:shadow-lg transition-all">
+                  ส่งข้อความติดต่อ
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer (Deep NDT Navy with KMUTT Orange Border Stripe)
+       ======================================================================== -->
+  <footer class="bg-[#162f55] text-slate-300 border-t-4 border-[#f05a28] py-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center space-x-4">
+        <img src="assets/images/kmutt-logo.png" alt="KMUTT Logo" class="w-12 h-12 object-contain bg-white/10 rounded-full p-1">
+        <div class="h-8 w-px bg-white/20"></div>
+        <div class="bg-white px-2.5 py-1 rounded-lg">
+          <img src="assets/images/ndt-logo.png" alt="NDT Logo" class="h-8 w-auto object-contain">
+        </div>
+        <div class="text-[11px] leading-tight text-slate-300 pl-2">
+          <div class="font-bold text-white text-xs">Maintenance Technology Center (MTC)</div>
+          <div id="footer-univ">King Mongkut's University of Technology Thonburi</div>
+        </div>
+      </div>
+
+      <div class="text-center md:text-right">
+        <p id="footer-copyright">© 2026 Maintenance Technology Center (MTC) & Novel Detection Development Technology Working Group.</p>
+        <p id="footer-rights" class="text-slate-400 mt-1">สงวนลิขสิทธิ์ทุกประการ</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Tech Detail Modal Dialog (Clean White-Navy Style)
+       ======================================================================== -->
+  <div id="tech-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="modal-content white-card bg-white border border-slate-300 w-full max-w-3xl rounded-3xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative stripe-orange-top">
+      
+      <!-- Close Button -->
+      <button id="modal-close-btn" type="button" class="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 hover:text-[#162f55] hover:bg-slate-200 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3 mb-3">
+        <span id="modal-tech-num" class="text-2xl font-black font-mono text-[#f05a28]">01</span>
+        <span id="modal-tech-tag" class="px-3 py-1 rounded-full text-xs font-bold badge-navy-light">Acoustic Emission</span>
+      </div>
+
+      <h3 id="modal-tech-title" class="text-xl sm:text-2xl font-extrabold text-[#162f55] mb-1">
+        Acoustic Emission Systems
+      </h3>
+      <div id="modal-tech-sub" class="text-sm font-semibold text-[#f05a28] mb-4">
+        ระบบตรวจวัดคลื่นเสียงความถี่สูง
+      </div>
+
+      <blockquote class="p-4 rounded-2xl bg-orange-50 border-l-4 border-[#f05a28] text-xs sm:text-sm text-orange-950 italic mb-6">
+        <p id="modal-tech-lead"></p>
+      </blockquote>
+
+      <!-- Details List -->
+      <div class="space-y-4 mb-6">
+        <h4 id="modal-lbl-details" class="text-xs font-bold text-[#162f55] uppercase tracking-wider">รายละเอียดและหลักการทำงาน:</h4>
+        <ul id="modal-tech-details" class="space-y-2">
+          <!-- Injected via JS -->
+        </ul>
+      </div>
+
+      <!-- Equipment & Applications -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-200 text-xs">
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <span id="modal-lbl-equipment" class="font-bold text-[#162f55] block mb-1">เครื่องมือและอุปกรณ์วิจัย:</span>
+          <p id="modal-tech-equipment" class="text-slate-600 leading-relaxed"></p>
+        </div>
+        <div class="bg-orange-50/60 p-4 rounded-xl border border-orange-200">
+          <span id="modal-lbl-applications" class="font-bold text-[#f05a28] block mb-1">การประยุกต์ใช้งานเชิงอุตสาหกรรม:</span>
+          <p id="modal-tech-applications" class="text-slate-700 leading-relaxed"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

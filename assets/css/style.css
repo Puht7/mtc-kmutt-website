@@ -1,0 +1,166 @@
+/* ==========================================================================
+   MTC - Maintenance Technology Center | KMUTT
+   Theme: White - NDT Navy (#162f55) with KMUTT Orange (#f05a28) Accent Lines
+   ========================================================================== */
+
+:root {
+  --kmutt-orange: #f05a28;
+  --kmutt-orange-dark: #c84113;
+  --kmutt-orange-light: #ff7e54;
+  --ndt-navy: #162f55;
+  --ndt-navy-dark: #0d1e38;
+  --ndt-navy-light: #244677;
+  --ndt-blue: #1d4ed8;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Prompt', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+  border: 2px solid #f1f5f9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kmutt-orange);
+}
+
+/* Modern Header & Glass Navbar */
+.glass-nav-light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* White Clean Cards with Soft Elevation */
+.white-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.white-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 25px -5px rgba(22, 47, 85, 0.08), 0 8px 10px -6px rgba(22, 47, 85, 0.04);
+  transform: translateY(-4px);
+}
+
+/* Accent Lines */
+.stripe-orange-top {
+  position: relative;
+}
+.stripe-orange-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f05a28, #fb923c);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.stripe-navy-top {
+  position: relative;
+}
+.stripe-navy-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #162f55;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid-light {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(22, 47, 85, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 47, 85, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Orange and Navy text styling */
+.text-navy {
+  color: var(--ndt-navy);
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, #0d1e38 0%, #162f55 60%, #1e4277 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #f05a28 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badges */
+.badge-kmutt-light {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+}
+
+.badge-navy-light {
+  background: #f0f4f9;
+  border: 1px solid #d0deee;
+  color: #162f55;
+}
+
+/* Section Title Accent Underline */
+.title-accent-line {
+  width: 48px;
+  height: 4px;
+  background: var(--kmutt-orange);
+  border-radius: 2px;
+}
+
+/* Modal Transitions */
+.modal-overlay {
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+.modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-overlay:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-content {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+}
+.modal-overlay.hidden .modal-content {
+  transform: scale(0.96) translateY(12px);
+  opacity: 0;
+}
+.modal-overlay:not(.hidden) .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
