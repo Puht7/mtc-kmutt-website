@@ -3,7 +3,7 @@
 // Controller: White-Navy Theme with KMUTT Orange Accents & Scopus Integration
 // ==========================================================================
 
-let currentLang = localStorage.getItem('mtc_lang') || 'th';
+let currentLang = localStorage.getItem('mtc_lang') || 'en';
 let activeModalTechId = null;
 
 // Initialize when DOM is ready
