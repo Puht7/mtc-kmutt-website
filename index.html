@@ -53,37 +53,37 @@
   <div class="h-1.5 w-full bg-gradient-to-r from-[#ea580c] via-[#f05a28] to-[#f97316] fixed top-0 left-0 z-[60]"></div>
 
   <!-- ========================================================================
-       Navigation Bar (Enlarged Logos & White-Navy Style)
+       Navigation Bar (Significantly Enlarged Logos & White-Navy Style)
        ======================================================================== -->
   <header class="fixed top-0 left-0 w-full z-50 glass-nav-light transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 sm:h-32 flex items-center justify-between">
       
       <!-- Dual Logos: KMUTT + NDT Working Group (Enlarged) -->
-      <a href="#" class="flex items-center space-x-3 sm:space-x-4 group">
-        <!-- KMUTT Crest Logo (Bigger) -->
-        <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+      <a href="#" class="flex items-center space-x-3 sm:space-x-5 group">
+        <!-- KMUTT Crest Logo (Enlarged) -->
+        <div class="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
           <img src="assets/images/kmutt-logo.png" alt="KMUTT Logo" class="w-full h-full object-contain drop-shadow-sm">
         </div>
         
         <!-- Subtle Divider Line -->
-        <div class="h-10 sm:h-12 w-px bg-slate-300"></div>
+        <div class="h-14 sm:h-20 w-px bg-slate-300"></div>
 
-        <!-- NDT Working Group Logo (Bigger & Transparent) -->
-        <div class="h-12 sm:h-16 w-auto flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
-          <img src="assets/images/ndt-logo.png" alt="NDT Working Group" class="h-full w-auto object-contain">
+        <!-- NDT Working Group Logo (Enlarged) -->
+        <div class="h-14 sm:h-22 w-auto flex-shrink-0 transition-transform duration-200 group-hover:scale-105 flex items-center">
+          <img src="assets/images/ndt-logo.png" alt="NDT Working Group" class="h-full w-auto max-h-[85px] object-contain">
         </div>
 
         <!-- Brand Text Badge -->
-        <div class="hidden xl:block pl-2 border-l border-slate-200">
-          <div class="text-base font-extrabold text-[#162f55] tracking-tight leading-tight">
+        <div class="hidden 2xl:block pl-3 border-l border-slate-200">
+          <div class="text-lg font-black text-[#162f55] tracking-tight leading-tight">
             MTC <span class="text-[#f05a28] font-black">KMUTT</span>
           </div>
-          <div class="text-[11px] text-slate-500 font-medium tracking-tight">Maintenance Technology Center</div>
+          <div class="text-xs text-slate-500 font-semibold tracking-tight">Maintenance Technology Center</div>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+      <nav class="hidden lg:flex items-center space-x-5 xl:space-x-6 text-sm font-semibold text-slate-700">
         <a href="#about" id="nav-about" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">เกี่ยวกับศูนย์</a>
         <a href="#technologies" id="nav-strengths" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">5 เทคโนโลยี NDT&E</a>
         <a href="#team" id="nav-team" class="hover:text-[#162f55] hover:border-b-2 hover:border-[#f05a28] py-1 transition-all">ทีมวิจัยและผู้เชี่ยวชาญ</a>
@@ -96,8 +96,8 @@
       <div class="flex items-center space-x-3 sm:space-x-4">
         <!-- Language Switcher Pill -->
         <div class="inline-flex p-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs shadow-inner">
-          <button id="lang-th" type="button" class="px-3 py-1 font-bold rounded-full bg-[#162f55] text-white shadow-sm transition">TH</button>
-          <button id="lang-en" type="button" class="px-3 py-1 font-bold rounded-full text-slate-500 hover:text-[#162f55] transition">EN</button>
+          <button id="lang-th" type="button" class="px-3.5 py-1.5 font-bold rounded-full bg-[#162f55] text-white shadow-sm transition">TH</button>
+          <button id="lang-en" type="button" class="px-3.5 py-1.5 font-bold rounded-full text-slate-500 hover:text-[#162f55] transition">EN</button>
         </div>
 
         <!-- CTA Button with KMUTT Orange Accent Border -->
@@ -130,7 +130,7 @@
     <!-- ======================================================================
          Hero Section (White-Navy with Subtle Grid & Wave)
          ====================================================================== -->
-    <section class="relative min-h-[85vh] flex items-center justify-center pt-36 pb-20 overflow-hidden bg-tech-grid-light">
+    <section class="relative min-h-[85vh] flex items-center justify-center pt-40 sm:pt-48 pb-20 overflow-hidden bg-tech-grid-light">
       <!-- Background Canvas for Subtle Wave -->
       <canvas id="heroWaveCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
@@ -433,14 +433,14 @@
   <footer class="bg-[#162f55] text-slate-300 border-t-4 border-[#f05a28] py-12 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       
-      <div class="flex items-center space-x-4">
-        <img src="assets/images/kmutt-logo.png" alt="KMUTT Logo" class="w-12 h-12 object-contain bg-white/10 rounded-full p-1">
-        <div class="h-8 w-px bg-white/20"></div>
-        <div class="bg-white px-2.5 py-1 rounded-lg">
-          <img src="assets/images/ndt-logo.png" alt="NDT Logo" class="h-8 w-auto object-contain">
+      <div class="flex items-center space-x-4 sm:space-x-5">
+        <img src="assets/images/kmutt-logo.png" alt="KMUTT Logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain bg-white/10 rounded-full p-1.5 shadow-sm">
+        <div class="h-12 sm:h-14 w-px bg-white/25"></div>
+        <div class="bg-white px-3 py-1.5 rounded-xl shadow-sm flex items-center">
+          <img src="assets/images/ndt-logo.png" alt="NDT Logo" class="h-10 sm:h-14 w-auto object-contain">
         </div>
-        <div class="text-[11px] leading-tight text-slate-300 pl-2">
-          <div class="font-bold text-white text-xs">Maintenance Technology Center (MTC)</div>
+        <div class="text-[11px] sm:text-xs leading-tight text-slate-300 pl-2">
+          <div class="font-bold text-white text-xs sm:text-sm">Maintenance Technology Center (MTC)</div>
           <div id="footer-univ">King Mongkut's University of Technology Thonburi</div>
         </div>
       </div>
