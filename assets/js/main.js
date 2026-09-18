@@ -314,8 +314,8 @@ function initTeamMembers() {
           <!-- Name, Academic Title & Scopus Button -->
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-[11px] font-mono font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">
-                #${m.order}
+              <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#f05a28]">
+                Principal Investigator
               </span>
             </div>
             <h3 class="text-base sm:text-lg font-bold text-[#162f55] group-hover:text-[#f05a28] transition-colors leading-snug">
