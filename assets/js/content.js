@@ -154,6 +154,7 @@ const siteData = {
       role_in_project_lbl: "บทบาทในโครงการ (Role in the Project):",
       key_expertise_lbl: "ความเชี่ยวชาญหลัก (Key Expertise):",
       scopus_btn_lbl: "Scopus Profile",
+      kirim_btn_lbl: "KIRIM Profile",
       members: [
         {
           id: "member-1",
@@ -166,6 +167,7 @@ const siteData = {
           category: "consultant",
           image: "assets/images/team-1.png",
           scopus: null,
+          kirim: null,
           profile: "Assoc. Prof. Wachira Methong มีความเชี่ยวชาญลึกซึ้งด้านวิศวกรรมการผลิต มีประสบการณ์สูงในระบบการวัดและระเบียบวิธีการตรวจสอบ เพื่อรองรับการพัฒนาแพลตฟอร์มการทดสอบที่มีความน่าเชื่อถือ และกระบวนการประเมินทางวิศวกรรมที่ทำซ้ำได้อย่างแม่นยำ",
           expertise: [
             "Nondestructive testing",
@@ -186,6 +188,7 @@ const siteData = {
           category: "director",
           image: "assets/images/team-2.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=14060769400",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54059079?lang=en_GB",
           profile: "Assoc. Prof. Dr. Bovornchok Poopat เชี่ยวชาญเฉพาะทางด้านเทคโนโลยีการเชื่อม ความสมบูรณ์เชิงโครงสร้าง (Structural Integrity) และการวิเคราะห์ความเสียหาย (Failure Analysis) ทั้งการตรวจสอบแบบทำลายและไม่ทำลาย เพื่อประเมินความปลอดภัยของโครงสร้างรับน้ำหนัก",
           expertise: [
             "Welding technology and process control",
@@ -208,6 +211,7 @@ const siteData = {
           category: "director",
           image: "assets/images/team-3.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=55324593700",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54051935?lang=en_GB",
           profile: "Assoc. Prof. Dr. Isaratat Phung-On เป็นผู้เชี่ยวชาญอาวุโสด้านโลหะวิทยาการเชื่อมและพฤติกรรมของวัสดุโครงสร้าง เชี่ยวชาญการตรวจวิเคราะห์กลไกการเสื่อมสภาพของวัสดุ กลไกการเกิดความเสียหาย และการประเมินอายุการใช้งานในชิ้นส่วนและโครงสร้างอุตสาหกรรม",
           expertise: [
             "Welding metallurgy",
@@ -229,6 +233,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-4.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=57217984180",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54167874?lang=en_GB",
           profile: "Dr. Somporn Peansukmanee ผสานความเชี่ยวชาญด้านวิศวกรรมการเชื่อม การวิเคราะห์คุณลักษณะของวัสดุ และการผลิตทางกลไก เพื่อแปลงแนวคิดการตรวจสอบทางทฤษฎีสู่ชิ้นงานต้นแบบและโซลูชันวิศวกรรมที่นำไปใช้งานได้จริง",
           expertise: [
             "Welding engineering",
@@ -250,6 +255,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-5.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=56884865000",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54234379?lang=en_GB",
           profile: "Asst. Prof. Dr. Chettapong Janya-anurak เชี่ยวชาญด้านแบบจำลองทางคณิตศาสตร์ การจำลองเชิงตัวเลข ระบบเมคคาทรอนิกส์ และการวิเคราะห์ข้อมูลอัจฉริยะ โดดเด่นด้านการตีความสัญญาณ การสร้างโมเดลระบบ และการประเมินความไม่แน่นอนเพื่อการตัดสินใจ",
           expertise: [
             "Simulation and mathematical modeling",
@@ -271,6 +277,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-6.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=35366408700",
+          kirim: null,
           profile: "Asst. Prof. Chalermkiat Jirarungsatian มีประสบการณ์ยาวนานในงานทดสอบแบบไม่ทำลายเชิงประยุกต์ เครื่องมือวัดทางอุตสาหกรรม และการพัฒนาระบบตรวจสอบภาคปฏิบัติ นำงานวิจัยสู่เครื่องมือวิศวกรรมที่พร้อมใช้งานภาคสนาม",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -292,6 +299,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-7.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
           profile: "Asst. Prof. Dr. Cherdpong Jomdecha เชี่ยวชาญโดยตรงด้านเทคโนโลยีการทดสอบแบบไม่ทำลาย เทคโนโลยีเซนเซอร์ การประมวลผลสัญญาณ และการจำลองเชิงตัวเลข มีผลงานโดดเด่นด้านการตรวจสอบลวดสลิงและระบบวินิจฉัยด้วยการรั่วไหลของฟลักซ์แม่เหล็ก (MFL)",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -313,6 +321,7 @@ const siteData = {
           category: "assistant",
           image: "assets/images/team-8.png",
           scopus: null,
+          kirim: null,
           profile: "Mr. Nico Brienza สำเร็จการศึกษาด้านวิศวกรรมเมคคาทรอนิกส์และการบูรณาการระบบ สนับสนุนการพัฒนาแพลตฟอร์มการตรวจสอบแบบบูรณาการ ผ่านการเชื่อมต่อฮาร์ดแวร์-ซอฟต์แวร์และการนำระบบไปปฏิบัติการจริง",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -549,6 +558,7 @@ const siteData = {
       role_in_project_lbl: "Role in the Project:",
       key_expertise_lbl: "Key Expertise:",
       scopus_btn_lbl: "Scopus Profile",
+      kirim_btn_lbl: "KIRIM Profile",
       members: [
         {
           id: "member-1",
@@ -561,6 +571,7 @@ const siteData = {
           category: "consultant",
           image: "assets/images/team-1.png",
           scopus: null,
+          kirim: null,
           profile: "Assoc. Prof. Wachira Methong has a strong background in production engineering and practical experience in measurement systems and inspection methods. His expertise supports the development of reliable testing platforms and repeatable engineering evaluation procedures.",
           expertise: [
             "Nondestructive testing",
@@ -581,6 +592,7 @@ const siteData = {
           category: "director",
           image: "assets/images/team-2.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=14060769400",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54059079?lang=en_GB",
           profile: "Assoc. Prof. Dr. Bovornchok Poopat specializes in welding technology, structural integrity, and failure analysis. His work spans both destructive and nondestructive evaluation, with a focus on engineering assessment and safety performance of welded and load-bearing systems.",
           expertise: [
             "Welding technology and process control",
@@ -603,6 +615,7 @@ const siteData = {
           category: "director",
           image: "assets/images/team-3.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=55324593700",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54051935?lang=en_GB",
           profile: "Assoc. Prof. Dr. Isaratat Phung-On is a senior expert in welding metallurgy and structural material behavior. His academic and research background supports advanced investigation of material degradation, failure mechanisms, and service-life assessment in industrial components and structures.",
           expertise: [
             "Welding metallurgy",
@@ -624,6 +637,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-4.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=57217984180",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54167874?lang=en_GB",
           profile: "Dr. Somporn Peansukmanee combines expertise in welding engineering, materials characterization, and mechanical fabrication. His multidisciplinary background is valuable for translating inspection concepts into workable prototypes and practical engineering solutions.",
           expertise: [
             "Welding engineering",
@@ -645,6 +659,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-5.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=56884865000",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54234379?lang=en_GB",
           profile: "Asst. Prof. Dr. Chettapong Janya-anurak has expertise in mathematical modeling, simulation, mechatronic systems, and intelligent data analysis. His background is especially relevant to signal interpretation, system modeling, and uncertainty-aware decision support.",
           expertise: [
             "Simulation and mathematical modeling",
@@ -666,6 +681,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-6.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=35366408700",
+          kirim: null,
           profile: "Asst. Prof. Chalermkiat Jirarungsatian has extensive experience in applied nondestructive testing, industrial instrumentation, and practical system development for testing applications. His work supports the transformation of research concepts into deployable engineering tools.",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -687,6 +703,7 @@ const siteData = {
           category: "researcher",
           image: "assets/images/team-7.png",
           scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
           profile: "Asst. Prof. Dr. Cherdpong Jomdecha has direct expertise in nondestructive testing and evaluation, sensor technologies, signal processing, and numerical simulation. His specialization aligns closely with wire rope inspection and magnetic-flux-based diagnostic systems.",
           expertise: [
             "Nondestructive testing and evaluation",
@@ -708,6 +725,7 @@ const siteData = {
           category: "assistant",
           image: "assets/images/team-8.png",
           scopus: null,
+          kirim: null,
           profile: "Mr. Nico Brienza has a background in mechatronics engineering and system integration. He supports the practical development of integrated inspection platforms through hands-on work in hardware-software interfacing and system implementation.",
           expertise: [
             "Nondestructive testing and evaluation",
