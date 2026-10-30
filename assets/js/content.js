@@ -23,7 +23,7 @@ const siteData = {
       btn_contact: "ร่วมมือทางวิจัยและอุตสาหกรรม",
       stats: [
         { label: "เทคโนโลยี NDT&E หลัก", value: "5 ด้าน" },
-        { label: "ทีมอาจารย์ & นักวิจัย", value: "8 ท่าน" },
+        { label: "ทีมอาจารย์ & นักวิจัย", value: "9 ท่าน" },
         { label: "Citations รวม (Scopus)", value: "1,000+", highlight: true },
         { label: "เฝ้าระวังโครงสร้าง Real-Time", value: "24/7" },
         { label: "มาตรฐานสากลอุตสาหกรรม", value: "ISO/ASNT" }
@@ -157,8 +157,32 @@ const siteData = {
       kirim_btn_lbl: "KIRIM Profile",
       members: [
         {
-          id: "member-1",
+          id: "member-7",
           order: 1,
+          name: "Asst. Prof. Dr. Cherdpong Jomdecha",
+          name_th: "ผศ.ดร. เชิดพงษ์ จอมเดชา",
+          initials: "CJ",
+          position: "Lab Leader & Researcher, Maintenance Technology Center, KMUTT",
+          position_th: "หัวหน้าห้องปฏิบัติการ (Lab Leader) & นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
+          badge: "LAB LEADER",
+          is_leader: true,
+          category: "researcher",
+          image: "assets/images/team-7.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
+          profile: "Asst. Prof. Dr. Cherdpong Jomdecha เชี่ยวชาญโดยตรงด้านเทคโนโลยีการทดสอบแบบไม่ทำลาย เทคโนโลยีเซนเซอร์ การประมวลผลสัญญาณ และการจำลองเชิงตัวเลข มีผลงานโดดเด่นด้านการตรวจสอบลวดสลิงและระบบวินิจฉัยด้วยการรั่วไหลของฟลักซ์แม่เหล็ก (MFL)",
+          expertise: [
+            "Nondestructive testing and evaluation",
+            "Numerical modeling and simulation",
+            "Sensor and signal processing",
+            "Industrial instrumentation",
+            "Welding and material processes"
+          ],
+          role_in_project: "มีบทบาทสำคัญหลักในการพัฒนาเทคโนโลยี Magnetic Flux Leakage / Magnetic Rope Testing (MFL/MRT) ครอบคลุมการออกแบบระบบเซนเซอร์, การประมวลผลสัญญาณ, การจำแนกลักษณะรอยตำหนิ และการจำลองสนามแม่เหล็ก"
+        },
+        {
+          id: "member-1",
+          order: 2,
           name: "Assoc. Prof. Wachira Methong",
           name_th: "รศ. วชิระ มีทอง",
           initials: "WM",
@@ -179,7 +203,7 @@ const siteData = {
         },
         {
           id: "member-2",
-          order: 2,
+          order: 3,
           name: "Assoc. Prof. Dr. Bovornchok Poopat",
           name_th: "รศ.ดร. บวรโชค ผู้พัฒน์",
           initials: "BP",
@@ -202,7 +226,7 @@ const siteData = {
         },
         {
           id: "member-3",
-          order: 3,
+          order: 4,
           name: "Assoc. Prof. Dr. Isaratat Phung-On",
           name_th: "รศ.ดร. อิศรทัต พึ่งอ้น",
           initials: "IP",
@@ -224,7 +248,7 @@ const siteData = {
         },
         {
           id: "member-4",
-          order: 4,
+          order: 5,
           name: "Dr. Somporn Peansukmanee",
           name_th: "ดร. สมพร เพียรสุขมณี",
           initials: "SP",
@@ -246,7 +270,7 @@ const siteData = {
         },
         {
           id: "member-5",
-          order: 5,
+          order: 6,
           name: "Asst. Prof. Dr. Chettapong Janya-anurak",
           name_th: "ผศ.ดร. เชษฐพงษ์ จรรยาอนุรักษ์",
           initials: "CJ",
@@ -268,7 +292,7 @@ const siteData = {
         },
         {
           id: "member-6",
-          order: 6,
+          order: 7,
           name: "Asst. Prof. Chalermkiat Jirarungsatian",
           name_th: "ผศ. เฉลิมเกียรติ จิรารุ่งเสถียร",
           initials: "CJ",
@@ -288,28 +312,7 @@ const siteData = {
           ],
           role_in_project: "สนับสนุนการพัฒนาชุดทดสอบ (Test-rig), เครื่องมือวัด, การออกแบบระบบการตรวจสอบ และกระบวนการตรวจสอบความถูกต้อง เพื่อมุ่งสู่การสร้างมาตรฐานและการนำไปใช้งานจริง"
         },
-        {
-          id: "member-7",
-          order: 7,
-          name: "Asst. Prof. Dr. Cherdpong Jomdecha",
-          name_th: "ผศ.ดร. เชิดพงษ์ จอมเดชา",
-          initials: "CJ",
-          position: "Researcher, Maintenance Technology Center, KMUTT",
-          position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
-          category: "researcher",
-          image: "assets/images/team-7.png",
-          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
-          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
-          profile: "Asst. Prof. Dr. Cherdpong Jomdecha เชี่ยวชาญโดยตรงด้านเทคโนโลยีการทดสอบแบบไม่ทำลาย เทคโนโลยีเซนเซอร์ การประมวลผลสัญญาณ และการจำลองเชิงตัวเลข มีผลงานโดดเด่นด้านการตรวจสอบลวดสลิงและระบบวินิจฉัยด้วยการรั่วไหลของฟลักซ์แม่เหล็ก (MFL)",
-          expertise: [
-            "Nondestructive testing and evaluation",
-            "Numerical modeling and simulation",
-            "Sensor and signal processing",
-            "Industrial instrumentation",
-            "Welding and material processes"
-          ],
-          role_in_project: "มีบทบาทสำคัญหลักในการพัฒนาเทคโนโลยี Magnetic Flux Leakage / Magnetic Rope Testing (MFL/MRT) ครอบคลุมการออกแบบระบบเซนเซอร์, การประมวลผลสัญญาณ, การจำแนกลักษณะรอยตำหนิ และการจำลองสนามแม่เหล็ก"
-        },
+
         {
           id: "member-8",
           order: 8,
@@ -331,6 +334,27 @@ const siteData = {
             "Numerical modeling and simulation"
           ],
           role_in_project: "สนับสนุนการรวมระบบต้นแบบ (Prototype Integration), การเชื่อมต่อเซนเซอร์-ฮาร์ดแวร์-ซอฟต์แวร์, การบันทึกข้อมูล (Data Acquisition) และการพัฒนาระบบตรวจสอบเมคคาทรอนิกส์พร้อมใช้งานภาคสนาม"
+        },
+        {
+          id: "member-9",
+          order: 9,
+          name: "Mr. Niwat Kunawong",
+          name_th: "นาย นิวัฒน์ คุณาวงศ์",
+          initials: "NK",
+          position: "Researcher, Welding Research and Consulting Center (KINGWELD), KMUTT",
+          position_th: "นักวิจัย ศูนย์วิจัยและบริการวิชาการด้านการเชื่อม มจธ. (KINGWELD)",
+          category: "researcher",
+          image: "assets/images/team-9.jpg",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=57130981200",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54196504?lang=en_GB",
+          profile: "Mr. Niwat Kunawong สำเร็จการศึกษาระดับปริญญาโท สาขาวิศวกรรมการเชื่อม (Master in Welding Engineering) คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี มีความเชี่ยวชาญด้านวิศวกรรมการเชื่อม การตรวจสอบแบบทำลายและไม่ทำลาย การตรวจสอบงานเชื่อมท่อส่ง และการเชื่อมจุดความต้านทาน",
+          expertise: [
+            "Welding Engineering",
+            "Destructive & Nondestructive testing",
+            "Pipeline Welding and Inspection",
+            "Resistance Spot Welding"
+          ],
+          role_in_project: "สนับสนุนงานวิจัยด้านการตรวจสอบแบบทำลายและไม่ทำลาย (DT & NDT), การกำหนดและประเมินกระบวนการเชื่อมท่อส่ง (Pipeline Welding and Inspection), การตรวจสอบรอยเชื่อมจุดความต้านทาน (Resistance Spot Welding) และการพัฒนาระบบการทดสอบ"
         }
       ]
     },
@@ -401,6 +425,28 @@ const siteData = {
       form_submit: "ส่งข้อความติดต่อ",
       form_success: "ขอบคุณที่ติดต่อศูนย์ MTC! ข้อความของคุณถูกส่งเรียบร้อยแล้ว เจ้าหน้าที่จะติดต่อกลับโดยเร็ว"
     },
+    presented_by: {
+      badge: "PRESENTED BY",
+      title: "องค์กรและหน่วยงานร่วมนำเสนอ",
+      subtitle: "ความร่วมมือทางวิชาการและงานวิจัยระหว่างคณะ ภาควิชา และศูนย์วิจัย มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (มจธ.)",
+      partners: [
+        { name: "Maintenance Technology Center (MTC)", image: "assets/images/presented-mtc.png" },
+        { name: "Novel Detection Development Technology Working Group (NDT)", image: "assets/images/presented-ndt.png" },
+        { name: "Faculty of Engineering, KMUTT", image: "assets/images/presented-kmutt-eng.png" },
+        { name: "Department of Production Engineering (PE & MCE)", image: "assets/images/presented-pe-mce.png" },
+        { name: "KMUTT Welding Research and Consulting Center (KINGWELD)", image: "assets/images/presented-kingweld.png" }
+      ]
+    },
+    partner_with: {
+      badge: "PARTNER WITH",
+      title: "Partner with",
+      subtitle: "พันธมิตรภาคอุตสาหกรรมและเทคโนโลยีชั้นนำที่ร่วมมือทางวิศวกรรม",
+      partners: [
+        { name: "STP Advance Products", image: "assets/images/partner-stp.png" },
+        { name: "Rohmann GmbH", image: "assets/images/partner-rohmann.png" },
+        { name: "GC Maintenance and Engineering (GCME)", image: "assets/images/partner-gcme.png" }
+      ]
+    },
     footer: {
       copyright: "© 2026 Maintenance Technology Center (MTC) & Novel Detection Development Technology Working Group.",
       univ: "King Mongkut's University of Technology Thonburi (KMUTT)",
@@ -427,7 +473,7 @@ const siteData = {
       btn_contact: "Industry & R&D Collaboration",
       stats: [
         { label: "Core NDT Technologies", value: "5 Areas" },
-        { label: "Faculty & Researchers", value: "8 Members" },
+        { label: "Faculty & Researchers", value: "9 Members" },
         { label: "Combined Scopus Citations", value: "1,000+", highlight: true },
         { label: "Real-Time Structural Health", value: "24/7" },
         { label: "International Standards", value: "ISO/ASNT" }
@@ -561,8 +607,32 @@ const siteData = {
       kirim_btn_lbl: "KIRIM Profile",
       members: [
         {
-          id: "member-1",
+          id: "member-7",
           order: 1,
+          name: "Asst. Prof. Dr. Cherdpong Jomdecha",
+          name_th: "ผศ.ดร. เชิดพงษ์ จอมเดชา",
+          initials: "CJ",
+          position: "Lab Leader & Researcher, Maintenance Technology Center, KMUTT",
+          position_th: "หัวหน้าห้องปฏิบัติการ (Lab Leader) & นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
+          badge: "LAB LEADER",
+          is_leader: true,
+          category: "researcher",
+          image: "assets/images/team-7.png",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
+          profile: "Asst. Prof. Dr. Cherdpong Jomdecha has direct expertise in nondestructive testing and evaluation, sensor technologies, signal processing, and numerical simulation. His specialization aligns closely with wire rope inspection and magnetic-flux-based diagnostic systems.",
+          expertise: [
+            "Nondestructive testing and evaluation",
+            "Numerical modeling and simulation",
+            "Sensor and signal processing",
+            "Industrial instrumentation",
+            "Welding and material processes"
+          ],
+          role_in_project: "In this project, he plays a central role in the development of Magnetic Flux Leakage / Magnetic Rope Testing technology, including sensor-system design, signal processing, defect characterization, and magnetic-field simulation."
+        },
+        {
+          id: "member-1",
+          order: 2,
           name: "Assoc. Prof. Wachira Methong",
           name_th: "รศ. วชิระ มีทอง",
           initials: "WM",
@@ -583,7 +653,7 @@ const siteData = {
         },
         {
           id: "member-2",
-          order: 2,
+          order: 3,
           name: "Assoc. Prof. Dr. Bovornchok Poopat",
           name_th: "รศ.ดร. บวรโชค ผู้พัฒน์",
           initials: "BP",
@@ -606,7 +676,7 @@ const siteData = {
         },
         {
           id: "member-3",
-          order: 3,
+          order: 4,
           name: "Assoc. Prof. Dr. Isaratat Phung-On",
           name_th: "รศ.ดร. อิศรทัต พึ่งอ้น",
           initials: "IP",
@@ -628,7 +698,7 @@ const siteData = {
         },
         {
           id: "member-4",
-          order: 4,
+          order: 5,
           name: "Dr. Somporn Peansukmanee",
           name_th: "ดร. สมพร เพียรสุขมณี",
           initials: "SP",
@@ -650,7 +720,7 @@ const siteData = {
         },
         {
           id: "member-5",
-          order: 5,
+          order: 6,
           name: "Asst. Prof. Dr. Chettapong Janya-anurak",
           name_th: "ผศ.ดร. เชษฐพงษ์ จรรยาอนุรักษ์",
           initials: "CJ",
@@ -672,7 +742,7 @@ const siteData = {
         },
         {
           id: "member-6",
-          order: 6,
+          order: 7,
           name: "Asst. Prof. Chalermkiat Jirarungsatian",
           name_th: "ผศ. เฉลิมเกียรติ จิรารุ่งเสถียร",
           initials: "CJ",
@@ -692,28 +762,7 @@ const siteData = {
           ],
           role_in_project: "In this project, he supports test-rig development, instrumentation, inspection-system design, and validation procedures to strengthen future standardization and field implementation."
         },
-        {
-          id: "member-7",
-          order: 7,
-          name: "Asst. Prof. Dr. Cherdpong Jomdecha",
-          name_th: "ผศ.ดร. เชิดพงษ์ จอมเดชา",
-          initials: "CJ",
-          position: "Researcher, Maintenance Technology Center, KMUTT",
-          position_th: "นักวิจัย ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา (MTC) มจธ.",
-          category: "researcher",
-          image: "assets/images/team-7.png",
-          scopus: "https://www.scopus.com/authid/detail.uri?authorId=6505661203",
-          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54116218?lang=en_GB",
-          profile: "Asst. Prof. Dr. Cherdpong Jomdecha has direct expertise in nondestructive testing and evaluation, sensor technologies, signal processing, and numerical simulation. His specialization aligns closely with wire rope inspection and magnetic-flux-based diagnostic systems.",
-          expertise: [
-            "Nondestructive testing and evaluation",
-            "Numerical modeling and simulation",
-            "Sensor and signal processing",
-            "Industrial instrumentation",
-            "Welding and material processes"
-          ],
-          role_in_project: "In this project, he plays a central role in the development of Magnetic Flux Leakage / Magnetic Rope Testing technology, including sensor-system design, signal processing, defect characterization, and magnetic-field simulation."
-        },
+
         {
           id: "member-8",
           order: 8,
@@ -735,6 +784,27 @@ const siteData = {
             "Numerical modeling and simulation"
           ],
           role_in_project: "In this project, he supports prototype integration, sensor-hardware-software interfacing, data acquisition, and the development of field-ready mechatronic inspection systems."
+        },
+        {
+          id: "member-9",
+          order: 9,
+          name: "Mr. Niwat Kunawong",
+          name_th: "นาย นิวัฒน์ คุณาวงศ์",
+          initials: "NK",
+          position: "Researcher, Welding Research and Consulting Center (KINGWELD), KMUTT",
+          position_th: "นักวิจัย ศูนย์วิจัยและบริการวิชาการด้านการเชื่อม มจธ. (KINGWELD)",
+          category: "researcher",
+          image: "assets/images/team-9.jpg",
+          scopus: "https://www.scopus.com/authid/detail.uri?authorId=57130981200",
+          kirim: "https://kirim.kmutt.ac.th/converis/portal/detail/Person/54196504?lang=en_GB",
+          profile: "Mr. Niwat Kunawong holds a Master's degree in Welding Engineering from the Faculty of Engineering, King Mongkut’s University of Technology Thonburi. He specializes in welding engineering, destructive and non-destructive testing, pipeline welding and inspection, and resistance spot welding.",
+          expertise: [
+            "Welding Engineering",
+            "Destructive & Nondestructive testing",
+            "Pipeline Welding and Inspection",
+            "Resistance Spot Welding"
+          ],
+          role_in_project: "In this project, he contributes to destructive and nondestructive testing procedures, pipeline welding evaluation and inspection standards, resistance spot welding analysis, and testing system development."
         }
       ]
     },
@@ -804,6 +874,28 @@ const siteData = {
       form_message: "Message / Specific Requirements",
       form_submit: "Send Message",
       form_success: "Thank you for reaching out to MTC! Your message has been received. Our team will contact you shortly."
+    },
+    presented_by: {
+      badge: "PRESENTED BY",
+      title: "Presented By",
+      subtitle: "Jointly presented by collaborating faculties, departments, and research centers at KMUTT",
+      partners: [
+        { name: "Maintenance Technology Center (MTC)", image: "assets/images/presented-mtc.png" },
+        { name: "Novel Detection Development Technology Working Group (NDT)", image: "assets/images/presented-ndt.png" },
+        { name: "Faculty of Engineering, KMUTT", image: "assets/images/presented-kmutt-eng.png" },
+        { name: "Department of Production Engineering (PE & MCE)", image: "assets/images/presented-pe-mce.png" },
+        { name: "KMUTT Welding Research and Consulting Center (KINGWELD)", image: "assets/images/presented-kingweld.png" }
+      ]
+    },
+    partner_with: {
+      badge: "PARTNER WITH",
+      title: "Partner with",
+      subtitle: "Leading industrial and technology partners in engineering collaboration",
+      partners: [
+        { name: "STP Advance Products", image: "assets/images/partner-stp.png" },
+        { name: "Rohmann GmbH", image: "assets/images/partner-rohmann.png" },
+        { name: "GC Maintenance and Engineering (GCME)", image: "assets/images/partner-gcme.png" }
+      ]
     },
     footer: {
       copyright: "© 2026 Maintenance Technology Center (MTC) & Novel Detection Development Technology Working Group.",

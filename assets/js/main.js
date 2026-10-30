@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initTeamMembers();
   initApplications();
   initServices();
+  initPresentedBy();
+  initPartnerWith();
+  initPartnerWith();
   initModalListeners();
   initMobileMenu();
   initContactForm();
@@ -43,6 +46,8 @@ function switchLanguage(lang) {
   initTeamMembers();
   initApplications();
   initServices();
+  initPresentedBy();
+  initPartnerWith();
 
   // If modal is open, re-render it
   if (activeModalTechId) {
@@ -297,12 +302,12 @@ function initTeamMembers() {
   const members = teamData.members;
 
   container.innerHTML = members.map(m => `
-    <div class="white-card rounded-3xl p-6 sm:p-7 border border-slate-200/90 flex flex-col justify-between hover:border-[#162f55] transition-all duration-300 group stripe-orange-top">
+    <div class="white-card rounded-3xl p-6 sm:p-7 border ${(m.badge === 'LAB LEADER' || m.is_leader) ? 'border-[#f05a28]/60 shadow-md ring-1 ring-[#f05a28]/20' : 'border-slate-200/90'} flex flex-col justify-between hover:border-[#162f55] transition-all duration-300 group stripe-orange-top">
       <div>
         <!-- Card Header: Photo + Details + Scopus/KIRIM Links -->
-        <div class="flex items-start gap-4 sm:gap-5 mb-5">
+        <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-5">
           <!-- Profile Image -->
-          <div class="w-18 h-22 sm:w-22 sm:h-26 rounded-2xl overflow-hidden bg-slate-100 border-2 border-slate-200 group-hover:border-[#f05a28] transition-colors flex-shrink-0 relative shadow-sm">
+          <div class="team-avatar-box rounded-2xl overflow-hidden bg-slate-100 border-2 border-slate-200 group-hover:border-[#f05a28] transition-colors flex-shrink-0 relative shadow-sm">
             <img src="${m.image}" alt="${m.name}" 
                  class="w-full h-full object-cover object-top" 
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -313,10 +318,19 @@ function initTeamMembers() {
 
           <!-- Name, Academic Title & External Profile Buttons -->
           <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#f05a28]">
-                Principal Investigator
-              </span>
+            <div class="flex items-center gap-2 mb-1.5">
+              ${(m.badge === 'LAB LEADER' || m.is_leader) ? `
+                <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-white bg-gradient-to-r from-[#f05a28] to-[#ea580c] shadow-xs ring-1 ring-[#f05a28]/30">
+                  <svg class="w-3.5 h-3.5 fill-current text-white" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                  LAB LEADER
+                </span>
+              ` : `
+                <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#f05a28]">
+                  ${m.badge || 'Principal Investigator'}
+                </span>
+              `}
             </div>
             <h3 class="text-base sm:text-lg font-bold text-[#162f55] group-hover:text-[#f05a28] transition-colors leading-snug">
               ${m.name}
@@ -439,6 +453,50 @@ function initServices() {
         <h4 class="text-base font-bold text-[#162f55] mb-1">${srv.title}</h4>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${srv.desc}</p>
       </div>
+    </div>
+  `).join('');
+}
+
+// --------------------------------------------------------------------------
+// Presented By Section Rendering
+// --------------------------------------------------------------------------
+function initPresentedBy() {
+  const container = document.getElementById('presented-logos-container');
+  if (!container) return;
+
+  const pData = siteData[currentLang].presented_by;
+  if (!pData) return;
+
+  setElementText('presented-badge', pData.badge);
+  setElementText('presented-title', pData.title);
+  setElementText('presented-subtitle', pData.subtitle);
+
+  container.innerHTML = pData.partners.map((p, idx) => `
+    <div class="white-card rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-[#f05a28]/60 transition-all duration-300 flex items-center justify-center group h-28 sm:h-36 ${idx === 4 ? 'col-span-2 sm:col-span-1 max-w-[240px] sm:max-w-none mx-auto w-full' : ''}">
+      <img src="${p.image}" alt="${p.name}" title="${p.name}" 
+           class="max-h-16 sm:max-h-20 w-auto max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300">
+    </div>
+  `).join('');
+}
+
+// --------------------------------------------------------------------------
+// Partner With Section Rendering
+// --------------------------------------------------------------------------
+function initPartnerWith() {
+  const container = document.getElementById('partner-logos-container');
+  if (!container) return;
+
+  const pData = siteData[currentLang].partner_with;
+  if (!pData) return;
+
+  setElementText('partner-badge', pData.badge);
+  setElementText('partner-title', pData.title);
+  setElementText('partner-subtitle', pData.subtitle);
+
+  container.innerHTML = pData.partners.map(p => `
+    <div class="white-card rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-[#162f55]/60 transition-all duration-300 flex items-center justify-center group h-28 sm:h-36">
+      <img src="${p.image}" alt="${p.name}" title="${p.name}" 
+           class="max-h-16 sm:max-h-20 w-auto max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300">
     </div>
   `).join('');
 }

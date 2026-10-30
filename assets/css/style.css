@@ -60,6 +60,19 @@ html {
   transform: translateY(-4px);
 }
 
+/* Team member avatar portrait container - 2x large scale */
+.team-avatar-box {
+  width: 140px;
+  height: 175px;
+  flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .team-avatar-box {
+    width: 176px;
+    height: 216px;
+  }
+}
+
 /* Accent Lines */
 .stripe-orange-top {
   position: relative;
