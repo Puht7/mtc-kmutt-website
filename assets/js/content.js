@@ -30,9 +30,9 @@ const siteData = {
       ]
     },
     about: {
-      badge: "ABOUT MTC & KMUTT",
-      title: "ศูนย์เทคโนโลยีการซ่อมบำรุงรักษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
-      desc_1: "Maintenance Technology Center (MTC) ร่วมกับกลุ่มวิจัย Novel Detection Development Technology (NDT) Working Group มุ่งเน้นการวิจัย พัฒนา และประยุกต์ใช้องค์ความรู้ด้านวิศวกรรมการตรวจสอบและซ่อมบำรุงรักษาขั้นสูง เพื่อยกระดับความปลอดภัย ความน่าเชื่อถือ และอายุการใช้งานของโครงสร้างและเครื่องจักรในภาคอุตสาหกรรม",
+      badge: "ABOUT NDT & KMUTT",
+      title: "กลุ่มวิจัยเทคโนโลยีการพัฒนาการตรวจสอบแบบไม่ทำลาย มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+      desc_1: "กลุ่มวิจัยเทคโนโลยีการพัฒนาการตรวจสอบแบบไม่ทำลาย มุ่งเน้นการวิจัย พัฒนา และประยุกต์ใช้องค์ความรู้ด้านวิศวกรรมการตรวจสอบและซ่อมบำรุงรักษาขั้นสูง เพื่อยกระดับความปลอดภัย ความน่าเชื่อถือ และอายุการใช้งานของโครงสร้างและเครื่องจักรในภาคอุตสาหกรรม",
       desc_2: "ด้วยความเชี่ยวชาญของคณาจารย์ นักวิจัย และเครื่องมือตรวจวัดที่ทันสมัย มจธ. ได้พัฒนาทั้งระบบฮาร์ดแวร์เซนเซอร์ความเร็วสูง และอัลกอริทึมการประมวลผลสัญญาณอัจฉริยะที่ตอบโจทย์ความท้าทายของโครงสร้างพื้นฐานระดับชาติ เช่น ทางรถไฟ สะพาน โรงกลั่น และชิ้นส่วนอากาศยาน",
       pillars: [
         {
@@ -480,9 +480,9 @@ const siteData = {
       ]
     },
     about: {
-      badge: "ABOUT MTC & KMUTT",
-      title: "Maintenance Technology Center at King Mongkut's University of Technology Thonburi",
-      desc_1: "The Maintenance Technology Center (MTC), in collaboration with the Novel Detection Development Technology (NDT) Working Group, is dedicated to advanced research, development, and engineering implementation in non-destructive inspection and lifecycle maintenance.",
+      badge: "ABOUT NDT & KMUTT",
+      title: "Novel Detection Development Technology (NDT) Working Group at King Mongkut's University of Technology Thonburi",
+      desc_1: "The Novel Detection Development Technology (NDT) Working Group, is dedicated to advanced research, development, and engineering implementation in non-destructive inspection and lifecycle maintenance.",
       desc_2: "Leveraging world-class faculty, researchers, and cutting-edge laboratory instruments, KMUTT engineers both high-speed motion-sensor hardware and algorithmic signal processing suites to safeguard critical national infrastructure including high-speed railways, bridges, refinery pipelines, and aerospace components.",
       pillars: [
         {
